@@ -27,8 +27,8 @@ jobs:
         run: |
           docker build -t $IMAGE_NAME:${{ github.ref_name }} ./backend
 
-      - name: Push Docker Image
-        run: docker push $IMAGE_NAME:${{ github.ref_name }}
+      # - name: Push Docker Image
+      #   run: docker push $IMAGE_NAME:${{ github.ref_name }}
 
       - name: Set Environment Directory
         id: set-env
