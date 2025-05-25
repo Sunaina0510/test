@@ -11,7 +11,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ghcr.io/${{ github.repository }}/demo-app
+      IMAGE_NAME: ghcr.io/sunaina0510/test
 
     steps:
       - name: Checkout Code
