@@ -45,5 +45,5 @@ jobs:
         env:
           KUBECONFIG: ${{ secrets.KUBECONFIG }}
         run: |
-          sed -i "s|ghcr.io/OWNER/REPO/demo-app:latest|$IMAGE_NAME:${{ github.ref_name }}|g" k8s/${{ steps.set-env.outputs.env_dir }}/deployment.yaml
+          sed -i "s|ghcr.io/sunaina0510/test:latest|$IMAGE_NAME:${{ github.ref_name }}|g" k8s/${{ steps.set-env.outputs.env_dir }}/deployment.yaml
           kubectl apply -f k8s/${{ steps.set-env.outputs.env_dir }}/deployment.yaml
